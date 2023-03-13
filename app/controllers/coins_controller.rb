@@ -13,11 +13,13 @@ class CoinsController < ApplicationController
   # GET /coins/new
   def new
     @coin = Coin.new
+    @collections = Collection.order(:name)
     @coin.build_collection_item
   end
 
   # GET /coins/1/edit
   def edit
+    @collections = Collection.order(:name)
   end
 
   # POST /coins or /coins.json
@@ -66,6 +68,6 @@ class CoinsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def coin_params
-      params.require(:coin).permit(:year, :mintmark, :mintage, :condition, :certification, :certification_number, :distribution, :defects, :coin_type_id, :collection_item_id, collection_item_attributes: [:code, :location, :notes])
+      params.require(:coin).permit(:year, :mintmark, :mintage, :condition, :certification, :certification_number, :distribution, :defects, :coin_type_id, :collection_item_id, collection_item_attributes: [:code, :location, :notes, collection_ids: []])
     end
 end

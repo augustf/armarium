@@ -41,12 +41,13 @@
 
   <p class="my-5">
     <strong class="block font-medium mb-1">Coin type:</strong>
-    <%= coin.coin_type_id %>
+    <%= coin.coin_type.name %>
   </p>
-
   <p class="my-5">
-    <strong class="block font-medium mb-1">Collection item:</strong>
-    <%= coin.collection_item_id %>
+    <strong class="block font-medium mb-1">Collection(s):</strong>
+    <% coin.collection_item.collections.each do |collection| %>
+      <%= collection.name %><br />
+    <% end %>
   </p>
 
   <% if action_name != "show" %>

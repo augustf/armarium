@@ -18,6 +18,7 @@ class CollectionItemsController < ApplicationController
 
   # GET /collection_items/1/edit
   def edit
+    @collections = Collection.order(:name)
   end
 
   # POST /collection_items or /collection_items.json
