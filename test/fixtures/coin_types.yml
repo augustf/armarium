@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  denomination: MyString
+  style: MyString
+  composition: MyString
+  first_issued: 2023-03-12
+  last_issued: 2023-03-12
+
+two:
+  name: MyString
+  denomination: MyString
+  style: MyString
+  composition: MyString
+  first_issued: 2023-03-12
+  last_issued: 2023-03-12

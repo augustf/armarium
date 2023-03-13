@@ -1,0 +1,22 @@
+<div id="<%= dom_id collection_item %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Code:</strong>
+    <%= collection_item.code %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Location:</strong>
+    <%= collection_item.location %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Notes:</strong>
+    <%= collection_item.notes %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this collection item", collection_item, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this collection item', edit_collection_item_path(collection_item), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

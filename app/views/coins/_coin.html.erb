@@ -1,0 +1,57 @@
+<div id="<%= dom_id coin %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Year:</strong>
+    <%= coin.year %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Mintmark:</strong>
+    <%= coin.mintmark %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Mintage:</strong>
+    <%= coin.mintage %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Condition:</strong>
+    <%= coin.condition %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Certification:</strong>
+    <%= coin.certification %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Certification number:</strong>
+    <%= coin.certification_number %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Distribution:</strong>
+    <%= coin.distribution %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Defects:</strong>
+    <%= coin.defects %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Coin type:</strong>
+    <%= coin.coin_type_id %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Collection item:</strong>
+    <%= coin.collection_item_id %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this coin", coin, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this coin', edit_coin_path(coin), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  author: MyString
+  year: 2023-03-12
+  type: 
+  publisher: MyString
+  subject: MyString
+  isbn: MyString
+  condition: MyString
+  collection_item: one
+
+two:
+  title: MyString
+  author: MyString
+  year: 2023-03-12
+  type: 
+  publisher: MyString
+  subject: MyString
+  isbn: MyString
+  condition: MyString
+  collection_item: two

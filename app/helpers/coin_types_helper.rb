@@ -1,0 +1,2 @@
+module CoinTypesHelper
+end
