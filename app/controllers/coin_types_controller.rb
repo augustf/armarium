@@ -65,6 +65,6 @@ class CoinTypesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def coin_type_params
-      params.require(:coin_type).permit(:name, :denomination, :style, :composition, :first_issued, :last_issued)
+      params.require(:coin_type).permit(:name, :denomination, :style, :composition, :first_issued, :last_issued, :obverse_image, :reverse_image)
     end
 end

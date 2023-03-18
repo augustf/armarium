@@ -77,12 +77,17 @@
     <%= form.label :coin_type_id %>
     <%= form.collection_select :coin_type_id, CoinType.order(:name),:id,:name, include_blank: true, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
-<!--
+
   <div class="my-5">
-    <%#= form.label :collection_item_id %>
-    <%#= form.text_field :collection_item_id, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.label :obverse_image %>
+    <%= form.file_field :obverse_image, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
--->
+
+  <div class="my-5">
+    <%= form.label :reverse_image %>
+    <%= form.file_field :reverse_image, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
   <div class="inline">
     <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
   </div>

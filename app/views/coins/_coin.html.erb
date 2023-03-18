@@ -1,4 +1,17 @@
 <div id="<%= dom_id coin %>">
+
+  <p class="my-5">
+    <% if coin.obverse_image.attached? %>
+      <image src="<%=url_for(coin.obverse_image)%>">
+    <% end %>
+  </p>
+
+  <p class="my-5">
+    <% if coin.reverse_image.attached? %>
+      <image src="<%=url_for(coin.reverse_image)%>">
+    <% end %>
+  </p>
+
   <p class="my-5">
     <strong class="block font-medium mb-1">Year:</strong>
     <%= coin.year %>
@@ -43,6 +56,7 @@
     <strong class="block font-medium mb-1">Coin type:</strong>
     <%= coin.coin_type.name %>
   </p>
+
   <p class="my-5">
     <strong class="block font-medium mb-1">Collection(s):</strong>
     <% coin.collection_item.collections.each do |collection| %>

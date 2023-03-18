@@ -1,4 +1,11 @@
 <div id="<%= dom_id book %>">
+
+  <p class="my-5">
+    <% if book.book_image.attached? %>
+      <image src="<%=url_for(book.book_image)%>">
+    <% end %>
+  </p>
+
   <p class="my-5">
     <strong class="block font-medium mb-1">Title:</strong>
     <%= book.title %>
@@ -15,8 +22,8 @@
   </p>
 
   <p class="my-5">
-    <strong class="block font-medium mb-1">Type:</strong>
-    <%= book.type %>
+    <strong class="block font-medium mb-1">Cover Type:</strong>
+    <%= book.cover_type %>
   </p>
 
   <p class="my-5">
@@ -40,8 +47,10 @@
   </p>
 
   <p class="my-5">
-    <strong class="block font-medium mb-1">Collection item:</strong>
-    <%= book.collection_item_id %>
+    <strong class="block font-medium mb-1">Collection(s):</strong>
+    <% book.collection_item.collections.each do |collection| %>
+      <%= collection.name %><br />
+    <% end %>
   </p>
 
   <% if action_name != "show" %>

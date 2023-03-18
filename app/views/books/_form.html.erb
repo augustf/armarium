@@ -11,6 +11,28 @@
     </div>
   <% end %>
 
+  <%= form.fields_for :collection_item do |collection_item_subform| %>
+     <div class="my-5">
+       <%= form.label :code %>
+       <%= collection_item_subform.text_field :code, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+     </div>
+
+     <div class="my-5">
+       <%= form.label :location %>
+       <%= collection_item_subform.text_field :location, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+     </div>
+
+     <div class="my-5">
+       <%= form.label :notes %>
+       <%= collection_item_subform.text_area :notes, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+     </div>
+
+     <div class="my-5">
+       <%= form.label :collection_ids, 'Collections' %>
+       <%= collection_item_subform.collection_select :collection_ids, Collection.order(:name), :id, :name, {}, {multiple: true, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" } %>
+     </div>
+  <% end %>
+
   <div class="my-5">
     <%= form.label :title %>
     <%= form.text_field :title, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
@@ -27,8 +49,8 @@
   </div>
 
   <div class="my-5">
-    <%= form.label :type %>
-    <%= form.text_field :type, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.label :cover_type %>
+    <%= form.text_field :cover_type, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="my-5">
@@ -52,8 +74,8 @@
   </div>
 
   <div class="my-5">
-    <%= form.label :collection_item_id %>
-    <%= form.text_field :collection_item_id, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.label :book_image %>
+    <%= form.file_field :book_image, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="inline">

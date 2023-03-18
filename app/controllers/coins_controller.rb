@@ -68,6 +68,6 @@ class CoinsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def coin_params
-      params.require(:coin).permit(:year, :mintmark, :mintage, :condition, :certification, :certification_number, :distribution, :defects, :coin_type_id, :collection_item_id, collection_item_attributes: [:code, :location, :notes, collection_ids: []])
+      params.require(:coin).permit(:year, :mintmark, :mintage, :condition, :certification, :certification_number, :distribution, :defects, :coin_type_id, :collection_item_id, :obverse_image, :reverse_image, collection_item_attributes: [:code, :location, :notes, collection_ids: []])
     end
 end

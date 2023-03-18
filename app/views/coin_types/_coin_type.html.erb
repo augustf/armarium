@@ -1,4 +1,17 @@
 <div id="<%= dom_id coin_type %>">
+
+  <p class="my-5">
+    <% if coin_type.obverse_image.attached? %>
+      <image src="<%=url_for(coin_type.obverse_image)%>">
+    <% end %>
+  </p>
+
+  <p class="my-5">
+    <% if coin_type.reverse_image.attached? %>
+      <image src="<%=url_for(coin_type.reverse_image)%>">
+    <% end %>
+  </p>
+
   <p class="my-5">
     <strong class="block font-medium mb-1">Name:</strong>
     <%= coin_type.name %>
